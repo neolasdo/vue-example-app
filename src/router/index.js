@@ -7,9 +7,6 @@ const MainContainer = () => import('@/containers/MainContainer')
 // Admin Containers
 const DefaultContainer = () => import('@/containers/admin/DefaultContainer')
 
-// App Containers
-const AppContainer = () => import('@/containers/frontend/AppContainer')
-
 // Views
 const Dashboard = () => import('@/views/admin/Dashboard')
 
@@ -60,6 +57,9 @@ const Page500 = () => import('@/views/pages/Page500')
 const Login = () => import('@/views/pages/Login')
 const Register = () => import('@/views/pages/Register')
 
+// View - Frontend
+const Home = () => import('@/views/frontend/Home')
+
 // Users
 const Users = () => import('@/views/components/users/Users')
 const User = () => import('@/views/components/users/User')
@@ -73,7 +73,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/',
+      redirect: '/home',
       component: {
         render (c) { return c('router-view') }
       },
@@ -83,6 +83,13 @@ export default new Router({
           path: '/',
           name: 'MainContainer',
           component: MainContainer,
+          children: [
+            {
+              path: '/home',
+              name: 'Home',
+              component: Home,
+            }
+          ]
         },
         {
           path: '/pages',
