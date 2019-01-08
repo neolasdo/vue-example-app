@@ -480,7 +480,7 @@
 </template>
 
 <script>
-import SocialBoxChartExample from './dashboard/SocialBoxChartExample'
+import SocialBoxChartExample from '../admin/dashboard/SocialBoxChartExample'
 export default {
   name: 'widgets',
   components: {
