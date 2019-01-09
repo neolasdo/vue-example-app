@@ -172,7 +172,7 @@ export default {
         },
         {
           name: 'Flags',
-          url: '/icons/flags',
+          url: '/admin/icons/flags',
           icon: 'icon-star'
         },
         {

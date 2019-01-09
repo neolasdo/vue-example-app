@@ -125,7 +125,7 @@ export default new Router({
         {
           path: '/admin',
           redirect: '/admin/dashboard',
-          name: 'AppContainer.vue',
+          // name: 'AppContainer.vue',
           component: DefaultContainer,
           children: [
             {
